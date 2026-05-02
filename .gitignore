@@ -8,3 +8,5 @@ build/
 plans/
 *.sqlite3
 ..env.swp
+.env-prod
+.env-test

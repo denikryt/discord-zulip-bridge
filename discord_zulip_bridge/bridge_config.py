@@ -46,8 +46,9 @@ class Settings:
     zulip_site: str
     zulip_bot_email: str
     zulip_api_key: str
-    zulip_forum_channel: str
+    zulip_text_stream: str
     zulip_text_topic: str
+    zulip_forum_stream: str
     bridge_db_path: str
     discord_activity_prefix: str
     zulip_activity_prefix: str
@@ -62,8 +63,9 @@ class Settings:
             zulip_site=_require("ZULIP_SITE").rstrip("/"),
             zulip_bot_email=_require("ZULIP_BOT_EMAIL"),
             zulip_api_key=_require("ZULIP_API_KEY"),
-            zulip_forum_channel=_require("ZULIP_FORUM_CHANNEL", "zulip_forum_channel"),
+            zulip_text_stream=_require("ZULIP_TEXT_STREAM", "zulip_text_stream"),
             zulip_text_topic=_require("ZULIP_TEXT_TOPIC", "zulip_text_topic"),
+            zulip_forum_stream=_require("ZULIP_FORUM_STREAM", "zulip_forum_stream"),
             bridge_db_path=_optional(".bridge.sqlite3", "BRIDGE_DB_PATH"),
             discord_activity_prefix=_optional("[Discord]", "DISCORD_ACTIVITY_PREFIX"),
             zulip_activity_prefix=_optional("[Zulip]", "ZULIP_ACTIVITY_PREFIX"),
